@@ -33,7 +33,7 @@ plt.xlabel('Scam Type')
 plt.ylabel('Losses (in millions USD)')
 plt.show()
 ```
-![Prevalence of Social Media Scams](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
+![Prevalence of Social Media Scams](https://via.placeholder.com/600x400)  
 
 ### Table: Dataset Overview
 | Feature               | Description                                      | Data Type  |
@@ -76,7 +76,7 @@ plt.pie(frequency, labels=tactics, autopct='%1.1f%%', startangle=140, colors=['r
 plt.title('Tactics Used by Fraudsters')
 plt.show()
 ```
-![Fraudster Tactics](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
+![Fraudster Tactics](https://via.placeholder.com/600x400)  
 
 ### Table: Challenges and Solutions
 | Challenge               | Description                                      | Potential Solution                  |
@@ -113,8 +113,7 @@ plt.ylabel('Rating (out of 5)')
 plt.legend()
 plt.show()
 ```
-![Manual vs. Automated Detection](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
-
+![Manual vs. Automated Detection](https://via.placeholder.com/600x400)  
 ---
 
 This section provides a detailed introduction and problem overview, supported by real-world data, visualizations, and comparisons. The next sections will delve into the objectives, challenges, and proposed solution in a similar step-by-step manner.
@@ -158,7 +157,7 @@ plt.xlabel('Objectives')
 plt.ylabel('Importance (out of 5)')
 plt.show()
 ```
-![Objectives and Their Importance](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
+![Objectives and Their Importance](https://via.placeholder.com/600x400)  
 
 ### Table: Objectives and Metrics
 | Objective                        | Description                                      | Metric                              |
@@ -199,7 +198,7 @@ plt.ylabel('Impact (out of 5)')
 plt.xticks(rotation=45)
 plt.show()
 ```
-![Challenges and Their Impact](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
+![Challenges and Their Impact](https://via.placeholder.com/600x400)  
 
 ### Table: Challenges and Mitigation Strategies
 | Challenge               | Description                                      | Mitigation Strategy                 |
@@ -337,7 +336,7 @@ xgb.plot_importance(model)
 plt.title('Feature Importance')
 plt.show()
 ```
-![Feature Importance](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
+![Feature Importance](https://via.placeholder.com/600x400)  
 
 ---
 
@@ -400,7 +399,7 @@ plt.ylabel('Score')
 plt.ylim(0, 1)
 plt.show()
 ```
-![Evaluation Metrics](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
+![Evaluation Metrics](https://via.placeholder.com/600x400) 
 
 ### Table: Evaluation Metrics
 | Metric    | Description                                      | Target Value |
@@ -440,8 +439,7 @@ plt.ylabel('Impact (out of 5)')
 plt.xticks(rotation=45)
 plt.show()
 ```
-![Limitations and Their Impact](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
-
+![Limitations and Their Impact](https://via.placeholder.com/600x400)  
 ### Table: Limitations and Mitigation Strategies
 | Limitation              | Description                                      | Mitigation Strategy                 |
 |-------------------------|--------------------------------------------------|-------------------------------------|
@@ -478,7 +476,7 @@ plt.ylabel('Achievement (%)')
 plt.ylim(0, 100)
 plt.show()
 ```
-![Expected Outcomes](https://via.placeholder.com/600x400)  *Placeholder for actual graph*
+![Expected Outcomes](https://via.placeholder.com/600x400)  
 
 ---
 
@@ -505,7 +503,7 @@ plt.show()
 
 ---
 
-This section provides a detailed explanation of the technical implementation, workflow diagram, evaluation parameters, limitations, expected outcomes, and conclusion, supported by visualizations and code. The report is now complete and ready for review.
+
 
 
 
