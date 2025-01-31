@@ -4,7 +4,6 @@
 
 ## 1. Introduction
 
-
 #### Overview of Social Engineering Frauds
 Social engineering frauds involve the manipulation of individuals into divulging confidential information or transferring money to fraudsters. On social media platforms, these frauds often take the form of fake accounts impersonating prominent individuals. These accounts exploit the trust and influence of well-known personalities to deceive users.
 
@@ -13,28 +12,29 @@ Social engineering frauds involve the manipulation of individuals into divulging
 - **Impact**: These frauds not only cause financial losses but also damage the reputation of the impersonated individuals and erode user trust in social media platforms.
 
 #### Real-World Data
-- **Data Source**: The dataset used for this report is sourced from Kaggle ([Fake Social Media Account Detection](https://www.kaggle.com/code/iamamir/fake-social-media-account-detection)) and GitHub ([Social Media Fake Account Detection](https://github.com/Vinod-Ghanchi/Social-Media-Fake-Account-Detection)).
+- **Data Source**: The dataset used for this report is sourced from Kaggle ([Fake Social Media Account Detection](https://www.kaggle.com/code/iamamir/fake-social-media-account-detection/input?select=fake_account__data_dict.csv), [Instagram Fake Spammer Genuine Accounts](https://www.kaggle.com/code/iamamir/fake-social-media-account-detection/input?select=train.csv))
+ and GitHub ([Social Media Fake Account Detection](https://github.com/Vinod-Ghanchi/Social-Media-Fake-Account-Detection)).
 - **Dataset Description**: The dataset includes features such as account creation date, follower-to-following ratio, posting frequency, profile completeness, and account activity patterns.
 
+
 ### Visualization: Prevalence of Social Media Scams
-```python
-import matplotlib.pyplot as plt
-
-# Data
-scam_types = ['Impersonation', 'Phishing', 'Fake Giveaways', 'Investment Scams']
-losses = [400, 200, 100, 70]  # in millions
-
-# Plot
-plt.figure(figsize=(10, 6))
-plt.bar(scam_types, losses, color=['red', 'blue', 'green', 'purple'])
-plt.title('Financial Losses Due to Social Media Scams (2022)')
-plt.xlabel('Scam Type')
-plt.ylabel('Losses (in millions USD)')
-plt.show()
-```
-![Prevalence of Social Media Scams](https://via.placeholder.com/600x400)  
+![Prevalence of Social Media Scams](images/1_Prevalence_of_Social_Media_Scams.png)  
 
 ### Table: Dataset Overview
+
+The dataset used for fake social media account detection comprises various features that help distinguish between genuine and fake accounts. The primary features include:
+
+- **Status Count**: The total number of posts or statuses an account has made.
+- **Followers Count**: The number of users following the account.
+- **Friends Count**: The number of users the account is following.
+- **Favorites Count**: The number of posts the account has marked as favorites.
+- **Listed Count**: The number of public lists that include the account.
+- **Language**: The primary language used by the account.
+- **Name**: The display name of the account.
+
+The target variable is the 'fake' column, where a value of 1 indicates a fake account, and 0 denotes a genuine account. This dataset is structured to facilitate binary classification tasks aimed at identifying fake social media profiles.
+
+
 | Feature               | Description                                      | Data Type  |
 |-----------------------|--------------------------------------------------|------------|
 | Account Creation Date | Date when the account was created                | DateTime   |
@@ -63,18 +63,7 @@ Fraudsters employ several tactics to create convincing fake accounts:
 4. **Privacy Concerns**: Automated systems must balance fraud detection with user privacy and data protection.
 
 ### Visualization: Fraudster Tactics
-```python
-# Data
-tactics = ['Profile Cloning', 'Name Spoofing', 'Follower Manipulation', 'Content Mimicry', 'Social Proof']
-frequency = [45, 30, 15, 5, 5]  # in percentage
-
-# Plot
-plt.figure(figsize=(10, 6))
-plt.pie(frequency, labels=tactics, autopct='%1.1f%%', startangle=140, colors=['red', 'blue', 'green', 'purple', 'orange'])
-plt.title('Tactics Used by Fraudsters')
-plt.show()
-```
-![Fraudster Tactics](https://via.placeholder.com/600x400)  
+![Fraudster Tactics](images/2_Fraudster_Tactics.png)
 
 ### Table: Challenges and Solutions
 | Challenge               | Description                                      | Potential Solution                  |
@@ -95,25 +84,10 @@ plt.show()
 | Cost                    | High labor costs                                | Lower operational costs             |
 
 ### Visualization: Manual vs. Automated Detection
-```python
-# Data
-aspects = ['Speed', 'Scalability', 'Accuracy', 'Cost']
-manual = [3, 2, 3, 1]  # Ratings out of 5
-automated = [5, 5, 4, 4]  # Ratings out of 5
+![Manual vs. Automated Detection](images/3_Manual_vs._Automated_Detection.png)
 
-# Plot
-plt.figure(figsize=(10, 6))
-plt.plot(aspects, manual, marker='o', label='Manual Detection')
-plt.plot(aspects, automated, marker='o', label='Automated Detection')
-plt.title('Comparison: Manual vs. Automated Detection')
-plt.xlabel('Aspects')
-plt.ylabel('Rating (out of 5)')
-plt.legend()
-plt.show()
-```
-![Manual vs. Automated Detection](https://via.placeholder.com/600x400)  
 ---
----
+
 
 ## 3. Objectives
 
@@ -132,23 +106,8 @@ The proposed solution aims to achieve the following objectives:
 - **User Privacy**: Compliance with regulations like GDPR ensures user trust and avoids legal repercussions.
 
 ### Visualization: Objectives and Their Importance
-```python
-import matplotlib.pyplot as plt
 
-# Data
-objectives = ['Real-Time Detection', 'Minimize False Positives/Negatives', 'Scalability', 'User Privacy']
-importance = [5, 5, 4, 4]  # Ratings out of 5
-
-# Plot
-plt.figure(figsize=(10, 6))
-plt.bar(objectives, importance, color=['red', 'blue', 'green', 'purple'])
-plt.title('Objectives and Their Importance')
-plt.xlabel('Objectives')
-plt.ylabel('Importance (out of 5)')
-plt.show()
-```
-![Objectives and Their Importance](https://via.placeholder.com/600x400)  
-
+![Objectives and Their Importance](images/4_ObjectivesandTheirImportance.png)
 ### Table: Objectives and Metrics
 | Objective                        | Description                                      | Metric                              |
 |----------------------------------|--------------------------------------------------|-------------------------------------|
@@ -173,21 +132,8 @@ plt.show()
 3. **Ethical Concerns**: Balancing fraud detection with user rights and avoiding overreach.
 
 ### Visualization: Challenges and Their Impact
-```python
-# Data
-challenges = ['Data Imbalance', 'Feature Engineering', 'Model Interpretability', 'Scalability', 'Evolving Tactics', 'Ethical Concerns']
-impact = [4, 4, 3, 5, 4, 4]  # Ratings out of 5
 
-# Plot
-plt.figure(figsize=(10, 6))
-plt.bar(challenges, impact, color=['red', 'blue', 'green', 'purple', 'orange', 'cyan'])
-plt.title('Challenges and Their Impact')
-plt.xlabel('Challenges')
-plt.ylabel('Impact (out of 5)')
-plt.xticks(rotation=45)
-plt.show()
-```
-![Challenges and Their Impact](https://via.placeholder.com/600x400)  
+![Challenges and Their Impact](images/5_ChallengesandTheirImpact.png)
 
 ### Table: Challenges and Mitigation Strategies
 | Challenge               | Description                                      | Mitigation Strategy                 |
@@ -224,14 +170,52 @@ The proposed solution leverages the XGBoost algorithm, a gradient boosting frame
 5. **Account Deletion**: Automatically delete flagged accounts or escalate them for manual review.
 
 ### Visualization: Workflow Diagram
+
 ```mermaid
+%% Define direction to be top-to-bottom
 graph TD
-    A[Data Collection] --> B[Preprocessing]
-    B --> C[Feature Extraction]
-    C --> D[Model Training]
-    D --> E[Real-Time Detection]
-    E --> F[Account Deletion/Review]
+
+  subgraph Data_Preparation[Data Preparation]
+    A1[Collect dataset low-light & normal images]
+    A2[Preprocess images resize, normalize, enhance]
+    A3[Split into train, validation, and test sets]
+  end
+
+  subgraph Model_Selection[Model Selection & Architecture]
+    B1[Select baseline model GAN, CNN, Transformer]
+    B2[Modify model architecture for enhancement]
+    B3[Define loss functions and hyperparameters]
+  end
+
+  subgraph Training[Model Training]
+    C1[Load dataset into training pipeline]
+    C2[Train model on GPU with batch processing]
+    C3[Monitor training metrics loss, PSNR, SSIM]
+    C4[Perform hyperparameter tuning]
+    C5[Save best-performing model weights]
+  end
+
+  subgraph Evaluation[Model Evaluation]
+    D1[Evaluate model on test dataset]
+    D2[Compare with baseline methods]
+    D3[Visualize results using qualitative & quantitative metrics]
+  end
+
+  subgraph Deployment[Deployment]
+    E1[Convert model to lightweight format ONNX, TensorRT]
+    E2[Optimize for real-time performance]
+    E3[Deploy on edge devices or cloud services]
+  end
+
+
+  %% Define connections
+  A1 --> A2 --> A3 --> B1
+  B1 --> B2 --> B3 --> C1
+  C1 --> C2 --> C3 --> C4 --> C5 --> D1
+  D1 --> D2 --> D3 --> E1
+  E1 --> E2 --> E3 
 ```
+
 
 ### Table: Feature Analysis
 | Feature               | Description                                      | Importance (out of 5) |
@@ -316,7 +300,6 @@ xgb.plot_importance(model)
 plt.title('Feature Importance')
 plt.show()
 ```
-![Feature Importance](https://via.placeholder.com/600x400)  
 
 ---
 
@@ -326,7 +309,7 @@ plt.show()
 #### Workflow Overview
 The workflow diagram illustrates the end-to-end process of detecting fraudulent accounts, from data collection to account deletion.
 
-#### Mermaid Syntax Workflow Diagram
+####  Mermaid Syntax Workflow Diagram
 ```mermaid
 graph TD
     A[Data Collection] --> B[Preprocessing]
@@ -362,23 +345,6 @@ The system's performance is evaluated using the following metrics:
 - **Recall**: Maximizes the detection of fraudulent accounts.
 - **F1 Score**: Provides a balanced measure of precision and recall.
 
-#### Visualization of Evaluation Metrics
-```python
-# Data
-metrics = ['Accuracy', 'Precision', 'Recall', 'F1 Score']
-values = [0.95, 0.93, 0.92, 0.925]  # Example values
-
-# Plot
-plt.figure(figsize=(10, 6))
-plt.bar(metrics, values, color=['red', 'blue', 'green', 'purple'])
-plt.title('Evaluation Metrics')
-plt.xlabel('Metrics')
-plt.ylabel('Score')
-plt.ylim(0, 1)
-plt.show()
-```
-![Evaluation Metrics](https://via.placeholder.com/600x400) 
-
 ### Table: Evaluation Metrics
 | Metric    | Description                                      | Target Value |
 |-----------|--------------------------------------------------|--------------|
@@ -402,21 +368,9 @@ plt.show()
 2. **Bias**: The model should be regularly audited to avoid biased decisions.
 
 ### Visualization: Limitations and Their Impact
-```python
-# Data
-limitations = ['Data Imbalance', 'Evolving Tactics', 'Computational Costs', 'Privacy Concerns', 'Bias']
-impact = [4, 5, 4, 5, 4]  # Ratings out of 5
 
-# Plot
-plt.figure(figsize=(10, 6))
-plt.bar(limitations, impact, color=['red', 'blue', 'green', 'purple', 'orange'])
-plt.title('Limitations and Their Impact')
-plt.xlabel('Limitations')
-plt.ylabel('Impact (out of 5)')
-plt.xticks(rotation=45)
-plt.show()
-```
-![Limitations and Their Impact](https://via.placeholder.com/600x400)  
+![Limitations and Their Impact](images/9_Limitations_and_Their_Impact.png) 
+
 ### Table: Limitations and Mitigation Strategies
 | Limitation              | Description                                      | Mitigation Strategy                 |
 |-------------------------|--------------------------------------------------|-------------------------------------|
@@ -430,7 +384,6 @@ plt.show()
 
 ## 10. Expectations from the Solution
 
-
 #### Expected Outcomes
 1. **Reduction in Fraudulent Accounts**: The system should significantly reduce the number of fraudulent accounts on social media platforms.
 2. **Improved User Trust**: By minimizing false positives, user trust in the platform will be maintained.
@@ -438,22 +391,8 @@ plt.show()
 4. **Compliance**: The system should comply with data protection regulations.
 
 #### Visualization of Expected Outcomes
-```python
-# Data
-outcomes = ['Reduction in Fraud', 'Improved User Trust', 'Scalability', 'Compliance']
-achievement = [90, 85, 95, 100]  # in percentage
 
-# Plot
-plt.figure(figsize=(10, 6))
-plt.bar(outcomes, achievement, color=['red', 'blue', 'green', 'purple'])
-plt.title('Expected Outcomes')
-plt.xlabel('Outcomes')
-plt.ylabel('Achievement (%)')
-plt.ylim(0, 100)
-plt.show()
-```
-![Expected Outcomes](https://via.placeholder.com/600x400)  
-
+![Expected Outcomes](images/10_ExpectedOutcomes.png)  
 ---
 
 ## 11. Conclusion
@@ -477,11 +416,3 @@ plt.show()
 3. Federal Trade Commission. (2022). Social Media Scams Report. Retrieved from [https://www.ftc.gov](https://www.ftc.gov)
 
 ---
-
-
-
-
-
-https://github.com/Vinod-Ghanchi/Social-Media-Fake-Account-Detection
-
-https://github.com/Vinod-Ghanchi/Social-Media-Fake-Account-Detection/blob/main/Dataset/users.csv
