@@ -131,9 +131,6 @@ The proposed solution aims to achieve the following objectives:
 2. **Evolving Fraud Tactics**: The system must adapt to new fraud strategies.
 3. **Ethical Concerns**: Balancing fraud detection with user rights and avoiding overreach.
 
-### Visualization: Challenges and Their Impact
-
-![Challenges and Their Impact](images/5_ChallengesandTheirImpact.png)
 
 ### Table: Challenges and Mitigation Strategies
 | Challenge               | Description                                      | Mitigation Strategy                 |
@@ -389,10 +386,7 @@ The system's performance is evaluated using the following metrics:
 2. **Improved User Trust**: By minimizing false positives, user trust in the platform will be maintained.
 3. **Scalability**: The solution should handle the vast volume of accounts efficiently.
 4. **Compliance**: The system should comply with data protection regulations.
-
-#### Visualization of Expected Outcomes
-
-![Expected Outcomes](images/10_ExpectedOutcomes.png)  
+ 
 ---
 
 ## 11. Conclusion
