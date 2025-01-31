@@ -113,13 +113,6 @@ plt.show()
 ```
 ![Manual vs. Automated Detection](https://via.placeholder.com/600x400)  
 ---
-
-This section provides a detailed introduction and problem overview, supported by real-world data, visualizations, and comparisons. The next sections will delve into the objectives, challenges, and proposed solution in a similar step-by-step manner.
-
-
-
-# Technical Report: Automated Detection of Social Engineering Frauds on Social Media Platforms
-
 ---
 
 ## 3. Objectives
